@@ -11,7 +11,6 @@ prime.numbers <- c(2,3,5,7,11,13,17,19,23,29,31,
 products <- c()
 for(i in 1:(length(prime.numbers)-1)){
   curr <- prime.numbers[i]
-  # print(prime.numbers[(i+1):length(prime.numbers)] *curr)
   for(j in prime.numbers[(i+1):length(prime.numbers)]){
     temp <- j*curr
     if(temp < 100){

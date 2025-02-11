@@ -49,6 +49,9 @@ to this \texttt{.Rnw} file.\\
 
 \textbf{Solution:} 
 % Write your answer and explanations here.
+This code creates a vector all possible products of unique prime numbers under 100 
+and compares it with the original numbers with \verb|\setdiff{}| function to 
+isolate the 1 incorrect number. 
 
 <<size="scriptsize", warning=F, message=F>>=
 original.numbers <- c(6,10,14,15,21,22,26,33,34,35,
@@ -74,6 +77,8 @@ for(i in 1:(length(prime.numbers)-1)){
 }
 wrong.answer <- setdiff(original.numbers,products)
 correct.replacement <- setdiff(products,original.numbers)
+print(paste("The wrong number is", wrong.answer, "and should be replaced with", 
+            correct.replacement))
 @
 \end{enumerate}
 

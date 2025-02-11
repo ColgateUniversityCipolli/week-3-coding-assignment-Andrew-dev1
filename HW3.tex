@@ -99,6 +99,9 @@ to this \texttt{.Rnw} file.\\
 
 \textbf{Solution:} 
 % Write your answer and explanations here.
+This code creates a vector all possible products of unique prime numbers under 100 
+and compares it with the original numbers with \verb|\setdiff{}| function to 
+isolate the 1 incorrect number. 
 
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
@@ -126,7 +129,12 @@ to this \texttt{.Rnw} file.\\
 \hldef{\}}
 \hldef{wrong.answer} \hlkwb{<-} \hlkwd{setdiff}\hldef{(original.numbers,products)}
 \hldef{correct.replacement} \hlkwb{<-} \hlkwd{setdiff}\hldef{(products,original.numbers)}
+\hlkwd{print}\hldef{(}\hlkwd{paste}\hldef{(}\hlsng{"The wrong number is"}\hldef{, wrong.answer,} \hlsng{"and should be replaced with"}\hldef{,}
+            \hldef{correct.replacement))}
 \end{alltt}
+\begin{verbatim}
+## [1] "The wrong number is 75 and should be replaced with 74"
+\end{verbatim}
 \end{kframe}
 \end{knitrout}
 \end{enumerate}
